@@ -51,7 +51,7 @@
     <div class="container">
       <!-- Logo -->
       <a class="navbar-brand me-3" href="#">
-        <img src="http://localhost/fedokterkita/includes/logo.png" alt="DokterKita">
+        <img src="http://localhost:3001/gambar/logo.png" alt="DokterKita">
       </a>
       
       <!-- Toggler (Mobile) -->

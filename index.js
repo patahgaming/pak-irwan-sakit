@@ -1,21 +1,22 @@
 const express = require('express');
 const { exec } = require('child_process');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
-const Middleware = './middleware.js'
 const app = express();
-
 // Middleware
 app.use(cors());
 app.use(express.json()); // Untuk membaca request body JSON
 
 // Root Endpoint
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.json({ message: 'Hello World!' });
 });
-
 // Endpoint untuk menjalankan file PHP dengan validasi
-app.get('/php/:file', (req, res) => {
+app.use('/gambar', express.static(path.join(__dirname, 'src', 'img')));
+
+
+app.get('/frontend/:file', (req, res) => {
     const file = req.params.file.replace(/[^a-zA-Z0-9_-]/g, '') + '.php'; // Hindari karakter berbahaya
     const phpPath = __dirname + `/src/frontend/${file}`;
 

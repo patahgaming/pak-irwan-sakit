@@ -60,7 +60,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="http://localhost/fedokterkita/img/success-icon.png" alt="Pembayaran Berhasil" class="icon">
+        <img src="./img/success-icon.png" alt="Pembayaran Berhasil" class="icon">
         <h1>Pembayaran Berhasil!</h1>
         <p>Terimakasih atas pembelian anda, silahkan tunggu</p>
         <a href="home">Kembali ke Beranda</a>

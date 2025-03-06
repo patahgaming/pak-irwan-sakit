@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 d-flex align-items-center">
-                    <img src="img/logo-white.png" alt="DokterKita" height="50">
+                    <img src="http://localhost:3001/gambar/logo-white.png" alt="DokterKita" height="50">
                 </div>
                 <div class="col-md-3 d-flex flex-column mt-5">
                     <strong>Site Map</strong>

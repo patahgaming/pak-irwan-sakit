@@ -85,11 +85,11 @@
         <h1>🌟 Layanan Kesehatan Terlengkap</h1>
         <div class="service-container">
             <a href="layananchat" class="service">
-                <img src="http://localhost/fedokterkita/img/cht.png" alt="Chat Dengan Dokter"/>
+                <img src="http://localhost:3001/gambar/cht.png" alt="Chat Dengan Dokter"/>
                 <span>Chat Dengan Dokter</span>
             </a>
             <a href="layanantemu" class="service">
-                <img src="http://localhost/fedokterkita/img/lynn.png" alt="Buat Janji Temu"/>
+                <img src="http://localhost:3001/gambar/lynn.png" alt="Buat Janji Temu"/>
                 <span>Buat Janji Temu</span>
             </a>
         </div>
@@ -106,7 +106,7 @@
                 </ul>
             </div>
             <div class="col-md-3 phone-image">
-                <img src="http://localhost/fedokterkita/img/hp2.png" alt="Phone showing chat with doctor app"/>
+                <img src="http://localhost:3001/gambar/hp2.png" alt="Phone showing chat with doctor app"/>
             </div>
             <div class="col-md-3">
                 <div class="info-box">

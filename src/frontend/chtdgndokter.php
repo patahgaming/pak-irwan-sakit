@@ -104,7 +104,7 @@ include('includes/header.php');
       <p class="section-subtitle">Layanan telemedicine yang siap siaga untuk bantu kamu hidup lebih sehat</p>
       
       <!-- Gambar tambahan -->
-      <img src="http://localhost/fedokterkita/includes/perawat.png" alt="Telemedicine Illustration" class="doctor-illustration">
+      <img src="http://localhost:3001/gambar/perawat.png" alt="Telemedicine Illustration" class="doctor-illustration">
       
       <p class="mt-4">
         Pilih dari ratusan dokter berpengalaman dan chat online sekarang.
@@ -112,9 +112,9 @@ include('includes/header.php');
       </p>
       <h5 class="mt-4">Mengapa Chat Dengan Dokter Kita</h5>
       <ul style="padding-left: 0px;">
-        <li><img src="http://localhost/fedokterkita/includes/img.png" class="icon-list"> Satu aplikasi untuk berbagai kebutuhan – periksa dokter, tes lab hingga penebusan obat.</li>
-        <li><img src="http://localhost/fedokterkita/includes/img2.png" class="icon-list"> Dapatkan rujukan ke pemeriksaan offline di RS atau pemeriksaan diagnostik jika diperlukan.</li>
-        <li><img src="http://localhost/fedokterkita/includes/img3.png" class="icon-list"> Dapat diintegrasikan dengan asuransimu agar kebutuhan kesehatan online terjamin asuransi.</li>
+        <li><img src="http://localhost:3001/gambar/img.png" class="icon-list"> Satu aplikasi untuk berbagai kebutuhan – periksa dokter, tes lab hingga penebusan obat.</li>
+        <li><img src="http://localhost:3001/gambar/img2.png" class="icon-list"> Dapatkan rujukan ke pemeriksaan offline di RS atau pemeriksaan diagnostik jika diperlukan.</li>
+        <li><img src="http://localhost:3001/gambar/img3.png" class="icon-list"> Dapat diintegrasikan dengan asuransimu agar kebutuhan kesehatan online terjamin asuransi.</li>
         
       </ul>
     </div>
@@ -123,7 +123,7 @@ include('includes/header.php');
     <div class="col-lg-5">
       <div class="text-end mb-3">
         <!-- Ganti path badge Kemenkes sesuai kebutuhan -->
-        <img src="http://localhost/fedokterkita/includes/kemen.png" alt="Dibina oleh Kemenkes" class="kemenkes-badge">
+        <img src="http://localhost:3001/gambar/kemen.png" alt="Dibina oleh Kemenkes" class="kemenkes-badge">
       </div>
       
       <!-- Search Box -->
@@ -135,7 +135,7 @@ include('includes/header.php');
         <h5 class="fw-bold mb-3">Rekomendasi Dokter</h5>
         <div class="d-flex align-items-center mb-3">
           <!-- Ganti path foto dokter sesuai kebutuhan -->
-          <img src="assets/dr-winny.jpg" alt="Dr. Winny Budiharto" class="me-3">
+          <img src="http://localhost:3001/gambar/dr-winny.jpg" alt="Dr. Winny Budiharto" class="me-3">
           <div>
             <h6 class="mb-0">Dr. Winny Budiharto</h6>
             <span class="text-muted">Dokter Umum</span>

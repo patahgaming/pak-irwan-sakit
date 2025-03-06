@@ -59,7 +59,7 @@
     <!-- Kolom Kiri: Form Login -->
     <div class="col-md-6 d-flex align-items-center login-left">
       <div class="w-100">
-      <img src="http://localhost/fedokterkita/includes/logo.png" 
+      <img src="http://localhost:3001/gambar/logo.png" 
            alt="DokterKita"  
            class="logo mb-4">
 
@@ -85,7 +85,7 @@
     <!-- Kolom Kanan: Ilustrasi -->
     <div class="col-md-6 login-right d-flex align-items-center justify-content-center">
       <!-- Ganti "login-illustration.png" dengan gambar sesuai kebutuhan -->
-      <img src="http://localhost/fedokterkita/includes/ilu.jpg" alt="Ilustrasi Login" class="illustration">
+      <img src="http://localhost:3001/gambar/ilu.jpg" alt="Ilustrasi Login" class="illustration">
     </div>
   </div>
 </div>

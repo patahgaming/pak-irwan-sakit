@@ -69,7 +69,7 @@
 
             <!-- Gambar di sebelah kanan -->
             <div class="col-md-6 text-center">
-                <img src="img/home.png" alt="Dokter Online" class="img-fluid" style="max-width: 100%;">
+                <img src="http://localhost:3001/gambar/home.png" alt="Dokter Online" class="img-fluid" style="max-width: 100%;">
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@
                 <p>Mulai dari konsultasi dengan dokter umum & spesialis, beli obat & vitamin online, medical check-up, hingga janji rumah sakit.</p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="img/home2.png" alt="Obat" class="img-fluid rounded custom-img">
+                <img src="http://localhost:3001/gambar/home2.png" alt="Obat" class="img-fluid rounded custom-img">
             </div>
         </div>
     </section>
