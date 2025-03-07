@@ -53,25 +53,24 @@
   </style>
 </head>
 <body>
-
 <div class="container-fluid">
   <div class="row">
-    <!-- Kolom Kiri: Form Login -->
+    <!-- Left Column: Login Form -->
     <div class="col-md-6 d-flex align-items-center login-left">
       <div class="w-100">
-      <img src="http://localhost:3001/gambar/logo.png" 
-           alt="DokterKita"  
-           class="logo mb-4">
+        <img src="http://localhost:3001/gambar/logo.png" 
+             alt="DokterKita"  
+             class="logo mb-4">
 
         <h4 class="mb-2">HALO, SELAMAT DATANG</h4>
         <p class="text-muted mb-4">Halo, selamat datang di website DokterKita</p>
 
-        <form>
+        <form id="loginForm">
           <div class="mb-3">
-            <input type="email" class="form-control" placeholder="e-mail" required>
+            <input type="email" id="email" class="form-control" placeholder="e-mail" required>
           </div>
           <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Password" required>
+            <input type="password" id="password" class="form-control" placeholder="Password" required>
           </div>
           <button type="submit" class="btn btn-custom text-white w-100 py-2">Masuk</button>
         </form>
@@ -82,9 +81,8 @@
       </div>
     </div>
 
-    <!-- Kolom Kanan: Ilustrasi -->
+    <!-- Right Column: Illustration -->
     <div class="col-md-6 login-right d-flex align-items-center justify-content-center">
-      <!-- Ganti "login-illustration.png" dengan gambar sesuai kebutuhan -->
       <img src="http://localhost:3001/gambar/ilu.jpg" alt="Ilustrasi Login" class="illustration">
     </div>
   </div>
@@ -92,5 +90,45 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Added JavaScript for API Integration -->
+<script>
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  try {
+    const response = await fetch('http://localhost:3001/api/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    
+    // Simpan token sebagai cookie
+    document.cookie = `authToken=${data.token}; path=/; max-age=86400`; // Cookie berlaku selama 1 hari (86400 detik)
+    
+    console.log('Login successful:', data);
+    alert('Login successful! Redirecting...');
+    window.location.href = '/home'; // Adjust redirect URL
+
+  } catch (error) {
+    console.error('Login error:', error);
+    alert('Login failed. Please check your credentials.');
+  }
+});
+</script>
 </body>
 </html>

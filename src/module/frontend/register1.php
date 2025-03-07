@@ -53,34 +53,36 @@
   </style>
 </head>
 <body>
-
 <div class="container-fluid">
   <div class="row">
-    <!-- Kolom Kiri: Form Login -->
+    <!-- Left Column: Registration Form -->
     <div class="col-md-6 d-flex align-items-center login-left">
       <div class="w-100">
-      <img src="http://localhost:3001/gambar/logo.png" 
-           alt="DokterKita"  
-           class="logo mb-4">
+        <img src="http://localhost:3001/gambar/logo.png" 
+             alt="DokterKita"  
+             class="logo mb-4">
 
         <h4 class="mb-2">HALO, SELAMAT DATANG</h4>
         <p class="text-muted mb-4">Halo, silakan isi form dibawah ini</p>
 
-        <form>
+        <form id="registerForm">
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Nama Lengkap" required>
+            <input type="text" id="nama_pasien" class="form-control" placeholder="Nama Lengkap" required>
           </div>
           <div class="mb-3">
-            <input type="email" class="form-control" placeholder="E-mail" required>
+            <input type="email" id="email" class="form-control" placeholder="E-mail" required>
           </div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Nomor HP" required>
+            <input type="text" id="no_telepon" class="form-control" placeholder="Nomor HP">
           </div>
           <div class="mb-3">
-            <input type="date" class="form-control" required>
+            <input type="date" id="tanggal_lahir" class="form-control" required>
           </div>
           <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Password" required>
+            <input type="password" id="password" class="form-control" placeholder="Password" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" id="alamat" class="form-control" placeholder="Alamat">
           </div>
           <button type="submit" class="btn btn-custom text-white w-100 py-2">Daftar</button>
         </form>
@@ -91,9 +93,8 @@
       </div>
     </div>
 
-    <!-- Kolom Kanan: Ilustrasi -->
+    <!-- Right Column: Illustration -->
     <div class="col-md-6 login-right d-flex align-items-center justify-content-center">
-      <!-- Ganti "login-illustration.png" dengan gambar sesuai kebutuhan -->
       <img src="http://localhost:3001/gambar/ilu2.jpg" alt="Ilustrasi Login" class="illustration">
     </div>
   </div>
@@ -101,5 +102,52 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Added JavaScript for API Integration -->
+<script>
+document.getElementById('registerForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  // Collect form data
+  const nama_pasien = document.getElementById('nama_pasien').value;
+  const email = document.getElementById('email').value;
+  const no_telepon = document.getElementById('no_telepon').value;
+  const tanggal_lahir = document.getElementById('tanggal_lahir').value;
+  const password = document.getElementById('password').value;
+  const alamat = document.getElementById('alamat').value;
+
+  try {
+    const response = await fetch('http://localhost:3001/api/auth/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+        nama_pasien: nama_pasien,
+        no_telepon: no_telepon || null, // Set to null if empty
+        tanggal_lahir: tanggal_lahir,
+        alamat: alamat || null // Set to null if empty
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    
+    // Handle successful registration
+    console.log('Registration successful:', data);
+    alert('Registration successful! Redirecting to login...');
+    window.location.href = 'login1'; // Redirect to login page
+
+  } catch (error) {
+    console.error('Registration error:', error);
+    alert('Registration failed. Please check your input and try again.');
+  }
+});
+</script>
 </body>
 </html>

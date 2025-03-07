@@ -112,7 +112,7 @@
                 <div class="info-box">
                     <h3>Tersedia 24 jam!</h3>
                     <p>Tak perlu khawatir dengan jam praktek, layanan Chat dengan Dokter tersedia setiap hari selama 24 jam.</p>
-                    <a href="/chat" class="btn btn-dark">Mulai Chat</a>
+                    <a href="chat" class="btn btn-dark">Mulai Chat</a>
                 </div>
             </div>
         </div>
