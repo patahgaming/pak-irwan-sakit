@@ -71,7 +71,7 @@
 <body>
     <nav class="navbar navbar-light px-5">
         <a class="navbar-brand mt-3 ms-4" href="#">
-            <img src="img/logo.png" alt="DokterKita" height="40">
+            <img src="http://localhost:3001/gambar/logo.png" alt="DokterKita" height="40">
         </a>
     </nav>
 
@@ -84,7 +84,7 @@
                 <a href="login1" class="btn btn-custom mt-3">Buat Akun / Login <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="col-md-7 hero-image">
-                <img src="img/landing-page.png" alt="DokterKita" class="img-fluid">
+                <img src="http://localhost:3001/gambar/landing-page.png" alt="DokterKita" class="img-fluid">
             </div>
         </div>
     </div>
@@ -93,7 +93,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 d-flex align-items-center">
-                    <img src="img/logo-white.png" alt="DokterKita" height="50">
+                    <img src="http://localhost:3001/gambar/logo-white.png" alt="DokterKita" height="50">
                 </div>
                 <div class="col-md-3 d-flex flex-column mt-5">
                     <strong>Site Map</strong>
